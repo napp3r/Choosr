@@ -1,0 +1,9 @@
+<div class="item-counter">{{'Количество выбранных предметов: ' + itemsCounter }}</div>
+<div class="selectable-blocks">
+  @for (data of shownItems; track data.id) {
+    <div class="block" (click)="chooseItem(data.id)">
+      <h4>{{ data.itemTitle }}</h4>
+      <p>{{ data.description }}</p>
+    </div>
+  }
+</div>
